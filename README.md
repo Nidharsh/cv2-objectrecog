@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Real-Time-Object-Detection-With-OpenCV
 
 ### Introduction
@@ -63,3 +64,6 @@ python real_time_object_detection.py --help
 * https://github.com/opencv/opencv
 * https://www.pyimagesearch.com/2017/11/06/deep-learning-opencvs-blobfromimage-works/
 * https://github.com/jrosebr1/imutils
+=======
+# cv2-objectrecog
+>>>>>>> 5c7ed87681bc7dc89584496f1625503f6dc704f9
