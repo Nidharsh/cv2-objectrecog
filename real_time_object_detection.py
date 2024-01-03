@@ -57,7 +57,7 @@ net = cv2.dnn.readNetFromCaffe(args["prototxt"], args["model"])
 # initialize the video stream,
 # and initialize the FPS counter
 print("[INFO] starting video stream...")
-vs = VideoStream(src=0).start()
+vs = VideoStream(src=1).start()
 # warm up the camera for a couple of seconds
 time.sleep(2.0)
 
@@ -144,12 +144,13 @@ while True:
 			cv2.rectangle(frame, (startX, startY), (endX, endY),
 				COLORS[idx], 2)
 			y = startY - 15 if startY - 15 > 15 else startY + 15
-			# Put a text outside the rectangular detection
+			# Put a text outside the r
+			# ectangular detection
 			# Choose the font of your choice: FONT_HERSHEY_SIMPLEX, FONT_HERSHEY_PLAIN, FONT_HERSHEY_DUPLEX, FONT_HERSHEY_COMPLEX, FONT_HERSHEY_SCRIPT_COMPLEX, FONT_ITALIC, etc.
 			cv2.putText(frame, label, (startX, y), cv2.FONT_HERSHEY_SIMPLEX, 0.5, COLORS[idx], 2)
 
 	# show the output frame
-	cv2.imshow("Frame", frame)
+	# cv2.imshow("Frame", frame)
 
 	# HOW TO STOP THE VIDEOSTREAM?
 	# Using cv2.waitKey(1) & 0xFF
@@ -176,11 +177,11 @@ while True:
 	# ord() returns the unicode code point of the character. For e.g., ord('a') = 97; ord('q') = 113
 
 	# Now, let's code this logic (just 3 lines, lol)
-	key = cv2.waitKey(1) & 0xFF
+	# key = cv2.waitKey(1) & 0xFF
 
 	# Press 'q' key to break the loop
-	if key == ord("q"):
-		break
+	# if key == ord("q"):
+	# 	break
 
 	# update the FPS counter
 	fps.update()
